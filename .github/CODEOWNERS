@@ -1,0 +1,31 @@
+# CODEOWNERS file
+# This file defines individuals or teams responsible for code in this repository.
+# Lines starting with '#' are comments.
+# Each line is a file pattern followed by one or more owners.
+
+# Default owners for everything in the repo
+* @kushmanmb-org/core-team
+
+# Security-related files require security team review
+/SECURITY.md @kushmanmb-org/security-team
+/.github/workflows/codeql-analysis.yml @kushmanmb-org/security-team
+/.github/dependabot.yml @kushmanmb-org/security-team
+/.github/rulesets/ @kushmanmb-org/security-team
+/static/.well-known/security.txt @kushmanmb-org/security-team
+
+# CI/CD workflows require DevOps review
+/.github/workflows/ @kushmanmb-org/devops-team
+
+# Package and dependency files require careful review
+/package.json @kushmanmb-org/core-team
+/yarn.lock @kushmanmb-org/core-team
+/package-lock.json @kushmanmb-org/core-team
+
+# Configuration files
+/.eslintrc.json @kushmanmb-org/core-team
+/tsconfig.json @kushmanmb-org/core-team
+/webpack_config/ @kushmanmb-org/core-team
+
+# Wallet and cryptography code requires extra scrutiny
+/src/services/WalletService/ @kushmanmb-org/security-team @kushmanmb-org/core-team
+/src/vendor/ @kushmanmb-org/security-team @kushmanmb-org/core-team
