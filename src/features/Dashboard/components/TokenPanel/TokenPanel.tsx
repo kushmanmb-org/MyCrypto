@@ -48,6 +48,7 @@ export function TokenPanel() {
   ) : (
     <TokenList
       tokens={allTokens}
+      showValue={true}
       setShowDetailsView={setShowDetailsView}
       setCurrentToken={setCurrentToken}
       isScanning={isScanning}
