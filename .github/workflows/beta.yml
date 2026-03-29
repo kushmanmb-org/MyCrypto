@@ -43,7 +43,7 @@ jobs:
         run: zip -r dist/web/standalone_mycrypto.zip dist/web/
 
       - name: 'Save standalone_mycrypto.zip to artifacts'
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: 'standalone_mycrypto'
           path: 'dist/web/standalone_mycrypto.zip'
