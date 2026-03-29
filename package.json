@@ -6,9 +6,9 @@
   "description": "MyCrypto is a free, open-source interface for interacting with the blockchain",
   "repository": "https://github.com/MyCryptoHQ/MyCrypto",
   "engines": {
-    "node": "12.14.1",
-    "npm": ">= 6.4.1",
-    "yarn": ">= 1.19.1"
+    "node": "18.20.4",
+    "npm": ">= 9.0.0",
+    "yarn": ">= 1.22.0"
   },
   "dependencies": {
     "@datapunt/matomo-tracker-js": "0.4.0",

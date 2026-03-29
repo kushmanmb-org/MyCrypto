@@ -52,10 +52,10 @@ jobs:
           echo $E2E_BASE_URL
           echo "E2E_BASE_URL=$E2E_BASE_URL" >> $GITHUB_ENV
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         if: github.event_name != 'repository_dispatch'
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         if: github.event_name == 'repository_dispatch'
         with:
           ref: 'refs/pull/${{ github.event.client_payload.pull_request.number }}/merge'
@@ -65,7 +65,7 @@ jobs:
         id: nvm
 
       - name: Setup node ${{ steps.nvm.outputs.NVMRC }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
